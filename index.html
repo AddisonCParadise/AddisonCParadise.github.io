@@ -233,6 +233,8 @@
     font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;
     margin-bottom:20px;
     border:3px solid var(--border);
+    object-fit:cover;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
   }
   .show-more-btn{
     display:inline-flex;align-items:center;gap:8px;
@@ -272,6 +274,26 @@
 
   .mobile-header, .mobile-toggle{display:none;}
 
+  /* ===== Top navbar ===== */
+  .topnav{
+    position:fixed;top:0;left:var(--sidebar-w);right:0;height:64px;
+    display:flex;align-items:center;gap:30px;
+    padding:0 40px;overflow-x:auto;
+    background:var(--bg);
+    border-bottom:1px solid var(--border);
+    z-index:25;
+    transition:left var(--transition), background var(--transition);
+  }
+  .topnav a{
+    font-size:13px;font-weight:600;letter-spacing:0.5px;
+    color:var(--text-main);white-space:nowrap;
+    padding:6px 2px;border-bottom:2px solid transparent;
+    transition:all var(--transition);
+  }
+  .topnav a:hover, .topnav a.active{color:var(--text-bright);border-bottom-color:var(--accent);}
+
+  main{padding-top:calc(64px + 64px);}
+
   @media (max-width:1000px){
     :root{--sidebar-w:0px;}
     .sidebar{
@@ -283,7 +305,7 @@
     }
     .sidebar.open{transform:translateX(0);}
     main, footer{margin-left:0;padding-left:28px;padding-right:28px;}
-    main{padding-top:110px;}
+    main{padding-top:166px;}
     .mobile-header{
       display:flex;justify-content:space-between;align-items:center;
       position:fixed;top:0;left:0;right:0;height:72px;
@@ -302,6 +324,7 @@
     .scrim.show{display:block;}
     .section-heading h2{font-size:22px;}
     .star-grid{grid-template-columns:1fr;}
+    .topnav{left:0;top:72px;height:52px;padding:0 20px;gap:22px;}
   }
 </style>
 </head>
@@ -315,10 +338,19 @@
 </div>
 <div class="scrim" id="scrim"></div>
 
+<nav class="topnav">
+  <a href="#about" class="nav-link">About</a>
+  <a href="#education" class="nav-link">Education</a>
+  <a href="#experience" class="nav-link">Experience</a>
+  <a href="#work" class="nav-link">Work</a>
+  <a href="#achievements" class="nav-link">Achievements</a>
+  <a href="#contact" class="nav-link">Contact</a>
+</nav>
+
 <div class="container">
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-top">
-      <div class="avatar">AP</div>
+      <img class="avatar" src="assets/addison-photo.jpg" alt="Addison Paradise">
       <div class="eyebrow">Business Analytics · MSBA '27</div>
       <h1>Addison Paradise</h1>
       <h2>Business Analyst &amp; Data Storyteller</h2>
