@@ -91,6 +91,29 @@ transition:all var(--transition);
 }
 .theme-toggle:hover{border-color:var(--accent);color:var(--accent);}
 
+/* ===== Page banners ===== */
+.page-banner{
+position:relative;
+left:50%;right:50%;
+margin-left:-50vw;margin-right:-50vw;
+width:100vw;
+margin-top:-56px;
+margin-bottom:44px;
+height:220px;
+display:flex;align-items:center;justify-content:center;
+background-color:#2c5f82;
+background-image:linear-gradient(135deg, rgba(31,46,61,0.55), rgba(79,159,209,0.45));
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+overflow:hidden;
+}
+.page-banner h1{
+position:relative;z-index:1;
+color:#fff;font-size:46px;font-weight:700;letter-spacing:1px;
+text-shadow:0 2px 14px rgba(0,0,0,0.3);
+}
+
 /* ===== Main content ===== */
 main{
 max-width:900px;
@@ -232,6 +255,8 @@ font-size:12.5px;color:var(--text-main);
 @media (max-width:700px){
 .topnav{padding:0 20px;gap:12px;}
 .topnav .nav-links{gap:16px;}
+.page-banner{height:140px;margin-top:-40px;margin-bottom:32px;}
+.page-banner h1{font-size:30px;}
 .hero{gap:32px;}
 .hero-photo{width:200px;height:260px;}
 .hero-text h1{font-size:32px;}
@@ -267,6 +292,7 @@ main{padding:40px 24px 80px;}
 
 <!-- HOME -->
 <section id="home" class="view">
+<div class="page-banner" id="banner-home"><h1>Home</h1></div>
 <div class="hero">
 <img class="hero-photo" src="assets/profile.jpg" alt="Addison Paradise">
 <div class="hero-text">
@@ -290,6 +316,7 @@ main{padding:40px 24px 80px;}
 
 <!-- ABOUT -->
 <section id="about" class="view about">
+<div class="page-banner" id="banner-about"><h1>About</h1></div>
 <div class="section-heading"><h2>About</h2><span class="rule"></span></div>
 <div class="about-flex">
 <img class="about-photo" src="assets/Porfolio_pic.jpg" alt="Addison Paradise">
@@ -308,6 +335,7 @@ main{padding:40px 24px 80px;}
 
 <!-- EDUCATION -->
 <section id="education" class="view">
+<div class="page-banner" id="banner-education"><h1>Education</h1></div>
 <div class="section-heading"><h2>Education</h2><span class="rule"></span></div>
 <div class="card edu-card">
 <div class="edu-card-flex">
@@ -337,6 +365,7 @@ main{padding:40px 24px 80px;}
 
 <!-- EXPERIENCE -->
 <section id="experience" class="view">
+<div class="page-banner" id="banner-experience"><h1>Experience</h1></div>
 <div class="section-heading"><h2>Experience</h2><span class="rule"></span></div>
 <div class="card exp-card">
 <div class="role-row">
@@ -364,6 +393,7 @@ main{padding:40px 24px 80px;}
 
 <!-- WORK -->
 <section id="work" class="view">
+<div class="page-banner" id="banner-work"><h1>Work</h1></div>
 <div class="section-heading"><h2>Selected Work</h2><span class="rule"></span></div>
 <p style="margin-bottom:24px;max-width:650px;">Case studies described using the <strong>STAR method</strong> (Situation, Task, Action, Result) — the same framework recruiters are trained to look for.</p>
 <div class="card project-card">
@@ -413,6 +443,7 @@ main{padding:40px 24px 80px;}
 
 <!-- ACHIEVEMENTS -->
 <section id="achievements" class="view">
+<div class="page-banner" id="banner-achievements"><h1>Achievements</h1></div>
 <div class="section-heading"><h2>Achievements</h2><span class="rule"></span></div>
 <div class="card project-card">
 <span class="ph-tag">Add achievement</span>
@@ -440,6 +471,7 @@ main{padding:40px 24px 80px;}
 
 <!-- CONTACT -->
 <section id="contact" class="view contact">
+<div class="page-banner" id="banner-contact"><h1>Contact</h1></div>
 <div class="section-heading"><h2>Contact</h2><span class="rule"></span></div>
 <p>I'm actively exploring full-time opportunities in analytics, strategy, and operations, and I'd love to connect with people working in these spaces. My inbox is always open.</p>
 <a class="contact-btn" href="mailto:paraac26@wfu.edu">Say Hello ↗</a>
