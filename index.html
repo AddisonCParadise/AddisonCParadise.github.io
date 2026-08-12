@@ -132,7 +132,7 @@ margin-bottom:36px;
 
 /* ===== Home hero ===== */
 .hero{
-display:flex;gap:52px;align-items:center;flex-wrap:wrap;
+display:flex;gap:52px;align-items:flex-start;flex-wrap:wrap;
 padding-top:12px;
 }
 .hero-photo{
@@ -187,6 +187,25 @@ box-shadow:0 16px 36px rgba(0,0,0,0.18);
 flex-shrink:0;
 }
 .about-text{flex:1;min-width:280px;}
+
+.video-lead{
+font-size:15px;color:var(--accent);font-weight:600;
+margin-top:44px;margin-bottom:14px;
+}
+
+.qual-grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+gap:26px;margin-top:6px;
+}
+.qual-card{
+background:var(--bg-elevated);border:1px solid var(--border);border-radius:8px;
+padding:24px 20px;text-align:center;
+transition:transform var(--transition), box-shadow var(--transition);
+}
+.qual-card:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,0.18);}
+.qual-icon{font-size:34px;margin-bottom:12px;}
+.qual-card h3{font-size:16px;margin-bottom:8px;}
+.qual-card p{font-size:13.5px;color:var(--text-main);line-height:1.5;}
 
 .card{
 background:var(--bg-elevated);border:1px solid var(--border);
@@ -269,6 +288,7 @@ main{padding:40px 24px 80px;}
 .edu-logo{width:120px;height:120px;}
 .edu-logo-tn{width:160px;height:160px;}
 .video-block{padding:32px 20px;}
+.qual-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;}
 }
 </style>
 </head>
@@ -278,11 +298,11 @@ main{padding:40px 24px 80px;}
 <a href="#home" class="brand">Addison Paradise</a>
 <div class="nav-links">
 <a href="#home" class="nav-link">Home</a>
-<a href="#about" class="nav-link">About</a>
 <a href="#education" class="nav-link">Education</a>
 <a href="#experience" class="nav-link">Experience</a>
-<a href="#work" class="nav-link">Work</a>
-<a href="#achievements" class="nav-link">Achievements</a>
+<a href="#work" class="nav-link">Projects</a>
+<a href="#achievements" class="nav-link">Community Engagement</a>
+<a href="#qualifications" class="nav-link">Qualifications</a>
 <a href="#contact" class="nav-link">Contact</a>
 </div>
 <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
@@ -294,33 +314,12 @@ main{padding:40px 24px 80px;}
 <section id="home" class="view">
 <div class="page-banner" id="banner-home"><h1>Home</h1></div>
 <div class="hero">
-<img class="hero-photo" src="assets/profile.jpg" alt="Addison Paradise">
+<img class="hero-photo" src="assets/Porfolio_pic.jpg" alt="Addison Paradise">
 <div class="hero-text">
 <div class="eyebrow">Business Analytics · MSBA '27</div>
 <h1>Addison Paradise</h1>
 <h2 class="role">Business Analyst &amp; Data Storyteller</h2>
-<p class="tagline">Turning messy data into decisions people can act on — currently at Wake Forest, exploring analytics, strategy, and operations.</p>
-<div class="home-contact">
-<a href="mailto:paraac26@wfu.edu">✉ paraac26@wfu.edu</a>
-<a href="https://www.linkedin.com/in/addison-paradise/" target="_blank" rel="noopener">LinkedIn</a>
-<a href="assets/Resume.pdf" target="_blank" rel="noopener">📄 Resume</a>
-</div>
-</div>
-</div>
-<div class="video-block">
-<div class="video-icon">🎬</div>
-<h3>Video Introduction</h3>
-<p>Coming soon — a short video intro will be added here.</p>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="view about">
-<div class="page-banner" id="banner-about"><h1>About</h1></div>
-<div class="section-heading"><h2>About</h2><span class="rule"></span></div>
-<div class="about-flex">
-<img class="about-photo" src="assets/Porfolio_pic.jpg" alt="Addison Paradise">
-<div class="about-text">
+<div class="about">
 <p>Hi, I'm Addison — an analytical, detail-oriented <strong>Business Analytics graduate student at Wake Forest University</strong>, building on a Business Analytics degree and International Business minor from the University of Tennessee's Haslam College of Business. I work in <strong>SQL, Python, R, Tableau, and Power BI</strong> to turn complex, messy data into insights teams can actually act on.</p>
 <p>My "data identity" started with a much less technical skill: leading people. Directing programs for 400+ campers and a 75-person staff taught me how to bring structure to ambiguity fast — a mindset I now apply every time I open a new dataset. I care as much about the story a dashboard tells as I do about the model behind it, and I like sitting at the intersection of technical rigor and clear business communication.</p>
 <p>I'm currently exploring full-time roles in <strong>analytics, strategy, and operations</strong>, and I'm always glad to connect with people working in these spaces.</p>
@@ -330,6 +329,18 @@ main{padding:40px 24px 80px;}
 <span class="pill">Alteryx</span><span class="pill">R Shiny</span><span class="pill">Excel</span>
 </div>
 </div>
+<div class="home-contact">
+<a href="mailto:paraac26@wfu.edu">✉ paraac26@wfu.edu</a>
+<a href="https://www.linkedin.com/in/addison-paradise/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="assets/Resume.pdf" target="_blank" rel="noopener">📄 Resume</a>
+</div>
+</div>
+</div>
+<p class="video-lead">Prefer a face to the résumé? Here's a short video introduction.</p>
+<div class="video-block">
+<div class="video-icon">🎬</div>
+<h3>Video Introduction</h3>
+<p>Coming soon — a short video intro will be added here.</p>
 </div>
 </section>
 
@@ -393,8 +404,8 @@ main{padding:40px 24px 80px;}
 
 <!-- WORK -->
 <section id="work" class="view">
-<div class="page-banner" id="banner-work"><h1>Work</h1></div>
-<div class="section-heading"><h2>Selected Work</h2><span class="rule"></span></div>
+<div class="page-banner" id="banner-work"><h1>Projects</h1></div>
+<div class="section-heading"><h2>Selected Projects</h2><span class="rule"></span></div>
 <p style="margin-bottom:24px;max-width:650px;">Case studies described using the <strong>STAR method</strong> (Situation, Task, Action, Result) — the same framework recruiters are trained to look for.</p>
 <div class="card project-card">
 <span class="ph-tag">Add your project</span>
@@ -443,8 +454,8 @@ main{padding:40px 24px 80px;}
 
 <!-- ACHIEVEMENTS -->
 <section id="achievements" class="view">
-<div class="page-banner" id="banner-achievements"><h1>Achievements</h1></div>
-<div class="section-heading"><h2>Achievements</h2><span class="rule"></span></div>
+<div class="page-banner" id="banner-achievements"><h1>Community Engagement</h1></div>
+<div class="section-heading"><h2>Community Engagement</h2><span class="rule"></span></div>
 <div class="card project-card">
 <span class="ph-tag">Add achievement</span>
 <h3>[ Certification, award, or competition — e.g. "SQL for Data Science — Coursera" ]</h3>
@@ -466,6 +477,60 @@ main{padding:40px 24px 80px;}
 <li>Engaged in professional development workshops uniting businesswomen to promote growth and collaboration.</li>
 <li>Advanced knowledge of women's leadership and business strategy through participation in cross-industry events.</li>
 </ul>
+</div>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section id="qualifications" class="view">
+<div class="page-banner" id="banner-qualifications"><h1>Qualifications</h1></div>
+<div class="section-heading"><h2>Qualifications</h2><span class="rule"></span></div>
+<p style="margin-bottom:28px;max-width:650px;">A snapshot of the tools and skills I bring to analytics work.</p>
+<div class="qual-grid">
+<div class="qual-card">
+<div class="qual-icon">🐍</div>
+<h3>Python</h3>
+<p>Proficient in Python for data cleaning, statistical modeling, and automating recurring analysis workflows.</p>
+</div>
+<div class="qual-card">
+<div class="qual-icon">🗄️</div>
+<h3>SQL</h3>
+<p>Comfortable writing and optimizing SQL queries to pull, join, and structure data from relational databases.</p>
+</div>
+<div class="qual-card">
+<div class="qual-icon">📐</div>
+<h3>R</h3>
+<p>Use R for regression modeling, applied time series forecasting, and statistical analysis.</p>
+</div>
+<div class="qual-card">
+<div class="qual-icon">📊</div>
+<h3>Tableau</h3>
+<p>Build interactive dashboards that turn raw data into a clear, visual story for stakeholders.</p>
+</div>
+<div class="qual-card">
+<div class="qual-icon">🟡</div>
+<h3>Power BI</h3>
+<p>Design executive-ready dashboards that translate KPIs into decisions leadership can act on.</p>
+</div>
+<div class="qual-card">
+<div class="qual-icon">🧮</div>
+<h3>JMP</h3>
+<p>Apply JMP for exploratory data analysis, design of experiments, and applied statistics coursework.</p>
+</div>
+<div class="qual-card">
+<div class="qual-icon">🔧</div>
+<h3>Alteryx</h3>
+<p>Build repeatable data-prep workflows that clean and blend messy datasets before analysis.</p>
+</div>
+<div class="qual-card">
+<div class="qual-icon">📈</div>
+<h3>Excel</h3>
+<p>Advanced Excel skills spanning pivot tables, scenario analysis, and dynamic reporting.</p>
+</div>
+<div class="qual-card">
+<div class="qual-icon">🎨</div>
+<h3>R Shiny</h3>
+<p>Build interactive R Shiny apps that let non-technical users explore data themselves.</p>
+</div>
 </div>
 </section>
 
