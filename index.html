@@ -246,9 +246,9 @@ transition:transform var(--transition), box-shadow var(--transition);
 .exp-card .role{font-size:17px;font-weight:700;color:var(--text-bright);}
 .exp-card .org{font-size:14.5px;color:var(--accent);font-weight:600;}
 .exp-card .date{font-size:13px;color:var(--text-main);white-space:nowrap;}
-.exp-card ul{margin-top:12px;}
-.exp-card ul li{position:relative;padding-left:22px;margin-bottom:10px;font-size:15px;}
-.exp-card ul li::before{content:"▹";position:absolute;left:0;color:var(--accent);}
+.exp-card ul,.lead-card ul{margin-top:12px;}
+.exp-card ul li,.lead-card ul li{position:relative;padding-left:22px;margin-bottom:10px;font-size:15px;}
+.exp-card ul li::before,.lead-card ul li::before{content:"▹";position:absolute;left:0;color:var(--accent);}
 
 .project-card{position:relative;}
 .project-card .ph-tag{
@@ -529,11 +529,6 @@ main{padding:40px 24px 80px;}
 <!-- ACHIEVEMENTS -->
 <section id="achievements" class="view">
 <div class="page-banner" id="banner-achievements"><h1>Community Engagement</h1></div>
-<div class="card project-card">
-<span class="ph-tag">Add achievement</span>
-<h3>[ Certification, award, or competition — e.g. "SQL for Data Science — Coursera" ]</h3>
-<p style="font-size:14.5px;">[ Short description of what it demonstrates — self-directed learning, technical depth, recognition, etc. ]</p>
-</div>
 <div class="card lead-card">
 <h3>Sisterhood Committee</h3>
 <div class="org">Chi Omega Pi Chapter · Knoxville, TN · Aug 2022 – May 2026</div>
@@ -555,7 +550,7 @@ main{padding:40px 24px 80px;}
 
 <!-- QUALIFICATIONS -->
 <section id="qualifications" class="view">
-<div class="page-banner" id="banner-qualifications"><h1>Qualifications</h1></div>
+<div class="page-banner" id="banner-qualifications" style="background-image:linear-gradient(135deg, rgba(31,46,61,0.55), rgba(79,159,209,0.45)), url('images/qualificatinos.jpg');"><h1>Qualifications</h1></div>
 <p style="margin-bottom:28px;max-width:650px;">A snapshot of the tools and skills I bring to analytics work.</p>
 <div class="qual-grid">
 <div class="qual-card">
