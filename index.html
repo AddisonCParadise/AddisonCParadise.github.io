@@ -200,7 +200,7 @@ margin-top:40px;background:var(--bg-elevated);border:1px solid var(--border);bor
 .resume-panel .resume-download{
 display:inline-block;margin-bottom:26px;padding:11px 22px;background:var(--accent);color:#fff;border-radius:8px;font-weight:600;font-size:14px;
 }
-.resume-panel .resume-download:hover{opacity:0.88;}
+.resume-panel .resume-download:hover{opacity:0.88;}.resume-embed{margin-top:20px;border:1px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 16px 36px rgba(0,0,0,0.18);background:#fff;}.resume-pdf{width:100%;height:1000px;display:block;border:none;}
 .resume-sec{margin-bottom:20px;}
 .resume-sec:last-child{margin-bottom:0;}
 .resume-sec h4{font-size:13px;text-transform:uppercase;letter-spacing:0.6px;color:var(--accent);margin-bottom:8px;font-weight:700;}
@@ -309,7 +309,7 @@ main{padding:40px 24px 80px;}
 .edu-card-flex{gap:14px;}
 .edu-logo{width:120px;height:120px;}
 .edu-logo-tn{width:160px;height:160px;}
-.video-block{padding:32px 20px;}
+.video-block{padding:32px 20px;}.resume-pdf{height:500px;}
 .qual-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;}
 }
 </style>
@@ -360,62 +360,9 @@ main{padding:40px 24px 80px;}
 </div>
 <div class="resume-panel">
 <h3>Resume</h3>
-<a class="resume-download" href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjMgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago1IDAgb2JqCjw8Ci9Db250ZW50cyA5IDAgUiAvTWVkaWFCb3ggWyAwIDAgNjEyIDc5MiBdIC9QYXJlbnQgOCAwIFIgL1Jlc291cmNlcyA8PAovRm9udCAxIDAgUiAvUHJvY1NldCBbIC9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUkgXQo+PiAvUm90YXRlIDAgL1RyYW5zIDw8Cgo+PiAKICAvVHlwZSAvUGFnZQo+PgplbmRvYmoKNiAwIG9iago8PAovUGFnZU1vZGUgL1VzZU5vbmUgL1BhZ2VzIDggMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago3IDAgb2JqCjw8Ci9BdXRob3IgKFwoYW5vbnltb3VzXCkpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjA4MTIyMzUxMDcrMDAnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjA4MTIyMzUxMDcrMDAnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKFwoYW5vbnltb3VzXCkpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKOCAwIG9iago8PAovQ291bnQgMSAvS2lkcyBbIDUgMCBSIF0gL1R5cGUgL1BhZ2VzCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDMzOTcKPj4Kc3RyZWFtCkdhdTBFPyRHJF0mcS8qMFIibWgxbiNqVXU2X0Y3X01CWHVzamspSEBHJ2N0az9rU1chUEN1OGFHMTtddF5EP2xBYWQtZEk/TT9GYS88TCdJIyddTGopMHQ8JmEidEsqUGokIzpoT2YsVHE2WDdlZjVsOEZSKyNtQW1gUlxxXSFGPj1IbERcW0JAT2c0XERWVkdmLG9zbm5PQENNcDt1anBnRGB1J0hBQyVgQWNqVExAV0EkUU9eP2k7cCFTKikpJU1HM11TUGZfJyQhPlxOJVM4WW4vKSowL2NNRV41SDAidTJPTyhMSU5GcGxcO2EpU3AncFouVCcmMWQyc1QtNDRMO00/RktBMlZyMz5SSSNOUSM5SiknWTpsKytdLzA3WDpMWkBPR1VuZCMzKj5GI2JbOS1SbHFhWicpYDIibnBhWU1YUE1wdUM6QSwtaS4vTXAuI2dxSGRfJFI8PmFHM0g0SlpJOD4rT210MHVUKldIKGhpIixkOCYmQWRWZj1qPGZcTlJQI3Jgcy0tOXJbUmJjMmA+PydMJnRqP3AqOi1iL1tTMUdhLSwuLXA8M0hPVWdRckxTKUpqY2EsPSRhbGdlRFtyPjIrcFVFLzdTcC5eNUtAXjIyTlU0WzhcVHNkY2tLK3VaYWdNYG05OEkuNmBPb1MmbCxtOSNYUGJnXS4kX2xgO0gyUE9CU0g1SlhQZm4zMTwqVjwkTXAlREUmczdFPHNBUG1NLUhRJTsvR0psJ1BnVCosIldLKk41RDRMKlAxI0FDUks+L1dgKSEpWj0pOGpCNF0rYzBNKVZDRG5mMG5XUTg1PlE4MjVCKHReLDMvJmVTdD06KlNdPCFcb1YjTy9oLjsuTjsjZXFKLy4xNyxJNCxCYlhPRCRUS2lxKDVEJ0wsTSVXS2tHPGFWKSUxaWc2bU03SC1ZY2FSJlRiZEE5azhYPD8lTkY2V2IrRF1MT0BhPSZjOVtcZ2ZXWFJIIyU1KDQ3RFBDX1s2W2oxNlxPJl9STWdqcT83NWhxX2szPWolSS4zKG9PY0NkNDNMW0l1dGssazUhUVVOTC9ZTDRAMjkiWWFpc2dBJmpjMT1dXko1Lyg5QkNINF9IUU1OVlRNdEszWyNAXy9vTkg6Y3FVTFs5ZmxkZ2hzIk9gOD4qNkVUSTFAWmBtJSxIIV1CZ0pXYl4vN0FENTVtWzgvQyNrM1txdDhnU0RJYypqWj5VdT81RF5NSTdtWzxqcFJfQkpgOEBlOTo6bEgyVkRKU0MzJlI3NmJgXEsiXHEwaiN1PFlUSDI+MihyR2dgWisuOXAwNlxjUCxjNGs1dWJtUGIsL0hDWi00M1pGaFNbMHBEWSE2YS1EPCpkMihJXi9vTzZAPFNwYWxTPDlQJ1ZCSU9GYFZJbTQyW0tgdUZtLy1SV1ZAIiJTJV50Wy5pTyoqZFtSdFJlJTZ0XE8kLXF0M25CVWlzW0ZaPUoqajZHVSI2L05RbydzODxmXjVqWTNlOk0+ZTpzUzxMaF1MOG9WQG8xPTg0Z1sicilvaW9SKXVQQCtCNzNrNzglT2pxdTR1U2leb0FfQCpva3FnNVt1VmQ9Qk0yTDNtcFhSM3BJY0FzMyNhIyluMEVLazZdLlJbLERJKSUmdW86XUA8N1M5cCFjO05MZWlHVyRVdEVgcTImU0M7I1Q4TGYxQyw/SzZyX1UuZUpGJ1ZUTjVYNE5wS2MkMTlrJ2toLktoKzRYKjJRWktmLjdSWUVIZnE8QCNqaztCOW4wOWxwWEU3MDotWXJlUWY5L11rL1lxaT4sIldXbCRvZUNialRORC0qdSw4KTdAOkZeJTMhJU0tXEc8PyszNVJTPyxbMzJQO1gwNSJARVpaLFg5Y0ZuZXBOL24qWDBSdUs6JSdhKmlFQ11NLkVKRlpiVjU2MWIwZiFdIjJZOV5CI0dhYEAlOnNSXGwvUzZyWkFaRTVCQz1hZG5abSgjWCgvbHNGNTAxdFQxZz5tRytIYkE+Mz10aGcxZjBrQFRLVFc4PCJJbUojLCtpRz1KVDNDRSdtNyZaVEJgY0VLR1s7JTRoYGJldStyIzZvRWI1RlVgT1lqNSYmZUxYcSwqWXBOZygtSlFJZmRDPG9lay4+MFpEQGA5RUgjOHJJK3I0aGM/Q2hIMSdJLSxBbTJiT20wWHAyYUokcSFHQFFIXkkxI0E+L1QmPG4wUSsrNyNYJlIqKjw7X08vXEldTTVDR19iOj9FOGlHVykxTG9HcFhgM2AiKSdpITxOcW5WPC9dY3RiLEtJS2M0SUNmTE84bEA9SiRhX15WQDxKdS0/aTpuck1hOzxOUiNoQUFiIml1OEJGNVZXMkhoPnQkTFlEVThOZVUqITFCZVcmRTg0YGZiRV5iWSFSLEdoa0cmVEk+cGpsdDZUV0gsNlo4RzBrKGlRTzo+TmhHWVVEb0JELU1zUSUhYVc8SFMwRTRKUG5vUWJHQEg2TDg/PG5KXEFDbiZQbycoQUtGMzZhWkgpJDkkcFpXSmpKa21US2dzWWMqRkxJIzZzVm8wVypGZnFnbF46OD1wRUw3KDorPmNEZWxZO2cpPlYwc2EhO2toYiNGNTRzTGRXY2pfMShUMXMqXycjQmQ7dDguRlQ7TzdlMENbJC5MWF41RFdwPy9ia3UvZk8zakRraDtzUmx1QjdcS11gJlxhPHIsdDhwZCQxQEdSXVxYYDtCRldgST1jMypeRyUoXEQwblZgR1hLTlJVWSRnZ24iPFk7WUxAc05dYmhkQlwkQGFMKW9ycDtYU001WTRvS0IoQmlKRTkoODE/RjVjNkFJakdZUyk/cXBJUSlcMjJuJGI9OiRlPWY5JF0zOTZvVW5FN3VkVnRqN28jaExDXEJabG4va05NRS9cJChaSVR0X0QxSmNBdD9lN1JdWCpQXTJGJ1haQiEpT3I8SktIZixTdUA1bVFROnQrX1VTNGtEJHMoMiY6KSZQNjwpYDM+JjMqTiZ1VkdUPC5xYD1kaXJFSUdgW1wxaVBWY29xSlMwSFw3TEw8JWo+OTFPKSJaZW1HRlAxLzMvY3A9YGUtcE1CcG1gai5WS0gyMjZvOSFTOVxGSSpwL3ImRTp0XjguZUQxQlVpYT9MRDNrSEtjPEBMWzA8RWQ0TC4xdCZWKlIjKT5zQ2FFJyNcdEgiNkguWSJPalhAMnIlJUkjSkJeJG4mIS84a0MzVzItJTd1Py4kVmg1SSJhXSpiT0I1Tl1DUWFcZFJsIWZUUF5XI2JKME5iJDtfPCwpWyc+MUs4OmFoMjVITG1IV1I+SyNfTj9ZOUJcUSZlc1xibU9ELzRIJGcuMS1oTmRBVismPUNxM01iWW1zQyQqR1NNdCsvMjlsQSdrMiZFR15gInU0P0JkJ0dtVUZwLyVBXFZXRGgpbTc9dG9FLlcmZ25gdXFFZlE1Y1k+RllEdDwsViM2S0hFSzY/bGRSLlBScjtRbVpyb2I3Ni1YUC5WcGAiLVw0XTltWTc3ZiZTS1JkcytTIShxZ2IrLTU8aFEtUVlAW0RPTCInbj1dQUUmMCZfS2I5RkQyJW4oRmVFN1owYiJcIz1TSl8uO1dLPzE6Pyg8ZVxjPEdoSkpXKShbP2FYK109WnJZOFtHRG5PbiJJTE1fZE8/VjNLWjpkbzohbVRrY0xBRT5GInM1XmBXK3BXZj5QP1Y3UW5JXC9qU2BEaEQwKy07UmZcdVYlaVMjNzU0PD8pPyhFJiJIW3JaK01KITs5ZVVGJz5GQ0ZpQ11dWmpQblZAJmN0Jmk0NEhRM2oiNC5SXl0xJ2RHbSIrK29JZlBFPURmJiYhQ1YuJUFPMCsobls2Vm1GUF85Lz1nODRsOD1AYElQTmhqX0g7VGRrWmlVaTtBLFJWSkFJNi46NGdAJ1I3TVJIQ2skJ1ZCWjpwVCVEajdbXEhCMzdycyw6YS9kNCUvSzs6KU9DRShqWENhMVBWcnI1M1RBInUzKUQqSFJFSk9oUWw3USNhU2tjLHJsaSdQWCUnOkdCLlpiQ1Jvc1pOQSczZUd0ZlBjKUAycEYtTGAvUlZfYUguXz8pcyE0Mi8tMm4lIk9lQyIxMScwSW5dLi9oQmxLQUBMO0YsTWg6Tj0zal1iQmRmIyw2UScqUVpmcCMnIiFFQGo1Q3BOR1U9MCtIW0s0WkNtc1NoPGtkajtodWkoQStPcVJGU0tUMUhGZEoyK28lckZXQlxxTUcwPjNrJ1QlP1lSJz4zX3VrS1M5aCwvaUhtOkltSS9gWilsb2luLCxkMWlxa0kqMGxSJGJXXHI/V0dGPERFI2BPMlVEamMnSnBcam08NV9dVyxgU05fKkxGbSpTODNtSkxVI0pRZV5icC4nbC1oSDNdUGc9OUBuVjNEbnUzPC9oSmJyWlM1ZS9eWFovXStvYVxeTGskXHFFU05XX1lJSW1iPSlPOFVSUiNRXkRZR0gmIUhlSVQnX2I3TENLU25ab1UycTMmMl8/P2s0OG1cWENwU14zK1RyRi9sPjByUiVnPG9pdGk0YVFpZW8vVWYhfj5lbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCAxMAowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwNjEgMDAwMDAgbiAKMDAwMDAwMDExMiAwMDAwMCBuIAowMDAwMDAwMjE5IDAwMDAwIG4gCjAwMDAwMDAzMzEgMDAwMDAgbiAKMDAwMDAwMDQ0NiAwMDAwMCBuIAowMDAwMDAwNjM5IDAwMDAwIG4gCjAwMDAwMDA3MDcgMDAwMDAgbiAKMDAwMDAwMDk4NyAwMDAwMCBuIAowMDAwMDAxMDQ2IDAwMDAwIG4gCnRyYWlsZXIKPDwKL0lEIApbPGY1Mjc2YTVjZDZjNzExYzcxY2I1YTFiYzUzMWU4ZWYwPjxmNTI3NmE1Y2Q2YzcxMWM3MWNiNWExYmM1MzFlOGVmMD5dCiUgUmVwb3J0TGFiIGdlbmVyYXRlZCBQREYgZG9jdW1lbnQgLS0gZGlnZXN0IChvcGVuc291cmNlKQoKL0luZm8gNyAwIFIKL1Jvb3QgNiAwIFIKL1NpemUgMTAKPj4Kc3RhcnR4cmVmCjQ1MzQKJSVFT0YK" download="Addison_Paradise_Resume.pdf">Download PDF ↓</a>
-<div class="resume-sec">
-<h4>Business Analyst</h4>
-<p>Analytical and detail-oriented Business Analytics graduate student at Wake Forest University with skills in SQL, Python, R, Tableau, and Alteryx to transform complex data into actionable business insights. Proven ability to develop predictive models, interactive dashboards, and performance analyses that support strategic decision-making across cross-functional teams. Combines strong technical expertise with business acumen and effective communication to deliver data-driven solutions that improve organizational performance.</p>
-</div>
-<div class="resume-sec">
-<h4>Education</h4>
-<p class="resume-role">Wake Forest University School of Business, Winston-Salem, NC</p>
-<p class="resume-meta">Master of Science in Business Analytics — Expected May 2027</p>
-<p class="resume-role">The University of Tennessee — Haslam College of Business, Knoxville, TN</p>
-<p class="resume-meta">Bachelor of Science in Business Analytics, Minor in International Business — May 2026, Summa Cum Laude</p>
-</div>
-<div class="resume-sec">
-<h4>Areas of Expertise</h4>
-<p>Team Leadership · Problem-Solving · Data Organization · Presentation Skills · Time Management · Cross-functional Collaboration · Predictive Modeling · Dashboard Development · Data Visualization · Time Series Forecasting · Active Listening · Critical Thinking · Data Storytelling · Statistical Analysis · Professional Communication · Business Intelligence · Experimental Design · Data Cleaning</p>
-</div>
-<div class="resume-sec">
-<h4>Technical Skills &amp; Certifications</h4>
-<p><strong>Programming Languages:</strong> Python, SQL, R</p>
-<p><strong>Predictive Modeling &amp; Statistical Analysis:</strong> Linear Regression, Time Series Analysis, Exploratory Data Analysis, Logistic Regression</p>
-<p><strong>Data Visualizations:</strong> Tableau, JMP, Alteryx, R Shiny</p>
-<p><strong>Microsoft Office Suite:</strong> Excel, Word, PowerPoint</p>
-<p><strong>Certifications:</strong> Microsoft Excel Skills Badge, Bloomberg Finance Fundamentals Certification</p>
-</div>
-<div class="resume-sec">
-<h4>Professional Experience</h4>
-<p class="resume-role">Intern, Programs Director — YMCA Camp Cheerio, Glade Valley, NC</p>
-<p class="resume-meta">May 2025 – September 2025</p>
-<ul>
-<li>Developed a computer-based scheduling system that efficiently coordinated 8 daily activity periods across 400 campers and 75 staff, cutting scheduling time to under two hours.</li>
-<li>Trained, supervised, and evaluated staff, delivering performance feedback and coaching that improved lesson quality and consistency across all activity areas.</li>
-<li>Directed a $30,000 program budget and managed resource allocation across activities and facilities, sustaining a safe, engaging, and inclusive environment.</li>
-</ul>
-<p class="resume-role">Senior Counselor / Climbing Staff — YMCA Camp Cheerio, Glade Valley, NC</p>
-<p class="resume-meta">May 2024 – August 2024</p>
-<ul>
-<li>Managed daily supervision and mentorship for groups of 13-16 campers, age 12, supporting their physical, emotional, social, and mental well-being throughout the camp season.</li>
-<li>Performed daily safety-critical equipment inspections, pre-activity risk briefings, and hands-on technique instruction, maintaining a zero-incident safety record across the season.</li>
-<li>Partnered with a junior counselor to manage dynamics, resolve conflicts, and maintain a safe and inclusive camp environment.</li>
-</ul>
-</div>
-<div class="resume-sec">
-<h4>Leadership Experience</h4>
-<p class="resume-role">Sisterhood Committee — Chi Omega Pi Chapter, Knoxville, TN</p>
-<p class="resume-meta">August 2022 – May 2026</p>
-<ul>
-<li>Organized 10-12 sisterhood events each year for the 500+ person chapter with a team of 5.</li>
-<li>Participated in fundraising initiatives for The Dream Connection foundation through the chapter’s yearly dream child program.</li>
-<li>Mentored fellow members on time management, balancing chapter commitments and academic priorities.</li>
-</ul>
-<p class="resume-role">Former Active Member — Women of Haslam, Knoxville, TN</p>
-<p class="resume-meta">October 2023 – May 2026</p>
-<ul>
-<li>Engaged in professional development workshops uniting businesswomen to promote growth and collaboration.</li>
-<li>Advanced knowledge of women’s leadership and business strategy through participation in cross-industry events.</li>
-</ul>
+<a class="resume-download" href="assets/Resume.pdf" download="Addison_Paradise_Resume.pdf">Download PDF ↓</a>a>
+<div class="resume-embed">
+  <embed src="assets/Resume.pdf#toolbar=0&navpanes=0&view=FitH" type="application/pdf" class="resume-pdf">
 </div>
 </div>
 </section>
