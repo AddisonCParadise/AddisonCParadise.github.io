@@ -161,12 +161,16 @@ padding:9px 18px;transition:all var(--transition);
 
 .video-block{
 margin-top:48px;
-padding:44px 30px;
-border:2px dashed var(--border);
-border-radius:16px;
 text-align:center;
-background:var(--bg-elevated);
-transition:border-color var(--transition);
+}
+.video-embed{
+width:100%;
+max-width:640px;
+display:block;
+margin:0 auto;
+border-radius:16px;
+box-shadow:0 8px 24px rgba(0,0,0,0.18);
+background:#000;
 }
 .video-block .video-icon{font-size:34px;margin-bottom:14px;}
 .video-block h3{font-size:17px;margin-bottom:6px;color:var(--text-heading);}
@@ -355,9 +359,10 @@ main{padding:40px 24px 80px;}
 </div>
 <p class="video-lead">A little more me, a little less bullet points.</p>
 <div class="video-block">
-<div class="video-icon">🎬</div>
-<h3>Video Introduction</h3>
-<p>Coming soon — a short video intro will be added here.</p>
+<video class="video-embed" controls poster="assets/intro-video-poster.jpg" preload="metadata">
+<source src="assets/intro-video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 </div>
 <div class="resume-panel">
 <h3>Resume</h3>
