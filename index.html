@@ -433,49 +433,14 @@ Your browser does not support the video tag.
 <!-- WORK -->
 <section id="work" class="view">
 <div class="page-banner" id="banner-work" style="background-image:linear-gradient(135deg, rgba(31,46,61,0.55), rgba(79,159,209,0.45)), url('images/proj_banner.jpg');"><h1>Projects</h1></div>
-<p style="margin-bottom:24px;max-width:650px;">Case studies described using the <strong>STAR method</strong> (Situation, Task, Action, Result) — the same framework recruiters are trained to look for.</p>
 <div class="card project-card">
 <h3>Framingham Heart Study: Predicting Total Cholesterol</h3>
-<div class="star-grid">
-<div class="label">Situation</div><div>Heart disease is one of the most prevalent health problems in the U.S., and our team wanted to explore what factors are associated with total cholesterol using a large, publicly available cardiovascular health dataset.</div>
-<div class="label">Task</div><div>Individually responsible for packaging our team's six-part statistics project (dataset selection, data cleaning, descriptive statistics, probability, inference, and regression) into a professional, version-controlled GitHub repository with full documentation.</div>
-<div class="label">Action</div><div>Cleaned and analyzed 4,240 observations from the Framingham Heart Study dataset in Excel: computed descriptive statistics and frequency tables, tested distribution assumptions, ran hypothesis tests and a confidence interval, and built a multiple regression model, removing insignificant predictors one at a time and checking for multicollinearity.</div>
-<div class="label">Result</div><div>Final model identified 7 significant predictors of total cholesterol (gender, education, age, cigarettes per day, diastolic blood pressure, BMI, and heart rate); hypothesis testing also confirmed average cholesterol levels fall in the borderline-high range, a finding with real public-health relevance.</div>
-</div>
+<p>Heart disease is one of the most prevalent health problems in the U.S., so our team wanted to explore what factors are associated with total cholesterol using a large, publicly available cardiovascular health dataset. I was individually responsible for packaging our team’s six-part statistics project (dataset selection, data cleaning, descriptive statistics, probability, inference, and regression) into a professional, version-controlled GitHub repository with full documentation. I cleaned and analyzed 4,240 observations from the Framingham Heart Study dataset in Excel, computing descriptive statistics and frequency tables, testing distribution assumptions, running hypothesis tests and a confidence interval, and building a multiple regression model by removing insignificant predictors one at a time and checking for multicollinearity. The final model identified seven significant predictors of total cholesterol (gender, education, age, cigarettes per day, diastolic blood pressure, BMI, and heart rate), and hypothesis testing confirmed that average cholesterol levels fall in the borderline-high range — a finding with real public-health relevance.</p>
 <div class="project-links">
 <a href="https://github.com/AddisonCParadise/framingham-heart-study-analysis" target="_blank" rel="noopener">View Code / Repo ↗</a>
 <a href="https://github.com/AddisonCParadise/framingham-heart-study-analysis/blob/main/DECISIONS.md" target="_blank" rel="noopener">View Decision Log ↗</a>
 </div>
 </div>
-<div id="moreProjects">
-<div class="card project-card hidden-project">
-<span class="ph-tag">Add your project</span>
-<h3>[ Project Title — e.g. "MSBA Capstone: Demand Forecasting Dashboard" ]</h3>
-<div class="star-grid">
-<div class="label">Situation</div><div>[ ... ]</div>
-<div class="label">Task</div><div>[ ... ]</div>
-<div class="label">Action</div><div>[ ... ]</div>
-<div class="label">Result</div><div>[ ... ]</div>
-</div>
-<div class="project-links">
-<a href="#">View Code / Repo ↗</a>
-</div>
-</div>
-<div class="card project-card hidden-project">
-<span class="ph-tag">Add your project</span>
-<h3>[ Project Title — e.g. Undergrad Marketing/Ops Analytics Project ]</h3>
-<div class="star-grid">
-<div class="label">Situation</div><div>[ ... ]</div>
-<div class="label">Task</div><div>[ ... ]</div>
-<div class="label">Action</div><div>[ ... ]</div>
-<div class="label">Result</div><div>[ ... ]</div>
-</div>
-<div class="project-links">
-<a href="#">View Dashboard ↗</a>
-</div>
-</div>
-</div>
-<button class="show-more-btn" id="showMoreBtn">Show More ↓</button>
 </section>
 
 <!-- ACHIEVEMENTS -->
@@ -577,15 +542,6 @@ themeToggle.addEventListener('click', () => {
 const isDark = body.getAttribute('data-theme') === 'dark';
 body.setAttribute('data-theme', isDark ? 'light' : 'dark');
 themeToggle.textContent = isDark ? '🌙' : '☀️';
-});
-
-// Show More projects toggle
-const showMoreBtn = document.getElementById('showMoreBtn');
-const moreProjects = document.getElementById('moreProjects');
-showMoreBtn.addEventListener('click', () => {
-const isHidden = moreProjects.querySelector('.hidden-project');
-moreProjects.querySelectorAll('.project-card').forEach(c => c.classList.toggle('hidden-project'));
-showMoreBtn.textContent = isHidden ? 'Show Less ↑' : 'Show More ↓';
 });
 
 // View switching (replaces the old scrolling single-page layout)
